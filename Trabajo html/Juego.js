@@ -10,11 +10,8 @@ alert ("Bienvenido " + nombre + "\ntu contrincante es: " + nombreResultado);
 alert ("Guía del juego \nDebes elegir un elemento y si es superior al de tu enemigo ganas la ronda");
 alert ("Los elementos son: \nFuego, agua, tierra, aire, rayo, hielo y metal");
 
-let vidaP = 5
-let vidaE = 5
-
-// let juego = 1
-// while (juego != 0){
+let vidaP = 3
+let vidaE = 3
 
 while(vidaP != 0 && vidaE != 0){
     let yo = parseInt(prompt("Elige tu elemento \n1. Fuego \n2. Agua \n3. Tierra \n4. Aire \n5. Rayo \n6. Hielo \n7. Metal"));
@@ -23,8 +20,8 @@ while(vidaP != 0 && vidaE != 0){
     const enemigo = opc[Math.floor(Math.random() * opc.length)];
 
 // fuego
-    if(yo == 1 && enemigo == "fuego"){
-        alert("Empate! " + "\nTu enemigo también eligió: "+ enemigo)
+if(yo == 1 && enemigo == "fuego"){
+    alert("Empate! " + "\nTu enemigo también eligió: "+ enemigo)
     }
     else if(yo == 1 && enemigo == "agua"){
         vidaP--
@@ -209,11 +206,11 @@ while(vidaP != 0 && vidaE != 0){
     }
     else if(yo == 7 && enemigo == "rayo"){
         vidaP--
-        alert("Perdiste! " + "\nTu enemigo eligió: " + enemigo + "\nTu enemigo usó tu elemento como conductor" + "\nTe queda: " + vidaP + " vida")
+        alert("Perdiste! " + "\nTu enemigo eligió: " + enemigo + "\nTu enemigo usó tu elemento como conductor de electricidad" + "\nTe queda: " + vidaP + " vida")
     }
     else if(yo == 7 && enemigo == "hielo"){
         vidaE--
-        alert("Ganaste! " + "\nTu enemigo eligió: " + enemigo + "\nLa roca metálica que lanzaste partió el bloque de hielo de tu enemigo" + "\nAl enemigo le queda: " + vidaE + " vida")
+        alert("Ganaste! " + "\nTu enemigo eligió: " + enemigo + "\nLa roca metálica que lanzaste rompió el bloque de hielo de tu enemigo" + "\nAl enemigo le queda: " + vidaE + " vida")
     }
     else if(yo == 7 && enemigo == "metal"){
         alert("Empate! " + "\nTu enemigo también eligió: " + enemigo)
@@ -222,13 +219,7 @@ while(vidaP != 0 && vidaE != 0){
 
 if(vidaE == 0){
     alert ("Felicitaciones! Has ganado")
-}else if(vidaP == 0){
-    alert ("Has perdido")}
+    }else if(vidaP == 0){
+        alert ("Has perdido")}
 
-// let again = parseInt(prompt("Desea jugar de nuevo? \n1: Si \n2: No"));
-//     if(again == 1){
-//     }
-//     if(again == 2){
-//     }juego--
-// }
 alert("Gracias por jugar")
